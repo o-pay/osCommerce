@@ -1,6 +1,6 @@
 <?php
     /**
-     * @copyright  Copyright (c) 2015 O'Pay (http://www.allpay.com.tw)
+     * @copyright  Copyright (c) 2015 O'Pay (http://www.opay.tw)
      * @version 1.0.1021
      * @author Shawn.Chang
     */

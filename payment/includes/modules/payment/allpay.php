@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * @copyright  Copyright (c) 2015 AllPay (http://www.allpay.com.tw)
+	 * @copyright  Copyright (c) 2015 AllPay (http://www.opay.tw)
 	 * @version 1.0.1021
 	 * @author Shawn.Chang
 	*/
@@ -219,12 +219,12 @@
 				$aio->Send['MerchantTradeNo'] = '';
 				if (MODULE_PAYMENT_ALLPAY_TEST_MODE)
 				{
-					$service_url = 'https://payment-stage.allpay.com.tw/Cashier/AioCheckOut';
+					$service_url = 'https://payment-stage.opay.tw/Cashier/AioCheckOut';
 					$aio->Send['MerchantTradeNo'] = date('YmdHis');
 				}
 				else
 				{
-					$service_url = 'https://payment.allpay.com.tw/Cashier/AioCheckOut';
+					$service_url = 'https://payment.opay.tw/Cashier/AioCheckOut';
 				}
 				$aio->MerchantID = MODULE_PAYMENT_ALLPAY_MERCHANT_ID;
 				$aio->HashKey = MODULE_PAYMENT_ALLPAY_HASH_KEY;
