@@ -1,20 +1,20 @@
 <?php
     /**
      * @copyright  Copyright (c) 2015 O'Pay (http://www.opay.tw)
-     * @version 1.0.1021
+     * @version 1.2.0202
      * @author Shawn.Chang
     */
     
     chdir('../../../../');
     require('includes/application_top.php');
     
-    function add_comments($order_id, $status, $comments)
+    function add_comments($order_id, $status, $comments, $notified = '0')
     {
         $sql_data_array = array(
             'orders_id' => (int)$order_id
             , 'orders_status_id' => $status
             , 'date_added' => 'now()'
-            , 'customer_notified' => '0'
+            , 'customer_notified' => $notified
             , 'comments' => $comments
         );
         
@@ -140,7 +140,6 @@
                 {
                     case 'Credit':
                     case 'WebATM':
-                    case 'Tenpay':
                     case 'TopUpUsed':
                         if ($return_code != 1 and $return_code != 800)
                         {

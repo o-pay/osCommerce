@@ -1,7 +1,7 @@
 <?php
 /**
  * @copyright  Copyright (c) 2015 O'Pay (http://www.opay.tw)
- * @version 1.0.1021
+ * @version 1.2.0202
  * @author Shawn.Chang
 */
 
@@ -253,7 +253,7 @@ class opay
                 )
             );
             $aio->Send['TotalAmount'] = $total_price;
-            $aio->Send['TradeDesc'] = 'opay_module_oscommerce_1.1.0624';
+            $aio->Send['TradeDesc'] = 'opay_module_oscommerce_1.2.0202';
             
             # Set the payment
             $choose_payment = $this->check_payment($_POST['choose_payment']);
@@ -273,9 +273,6 @@ class opay
                     $aio->SendExtend['Desc_3'] = '';
                     $aio->SendExtend['Desc_4'] = '';
                     $aio->SendExtend['PaymentInfoURL'] = $aio->Send['ReturnURL'];
-                    break;
-                case 'Tenpay':
-                    $aio->SendExtend['ExpireTime'] = date('Y/m/d H:i:s', strtotime('+3 days'));
                     break;
                 case 'Credit':
                     # Do not support UnionPay
@@ -512,7 +509,6 @@ function get_allpay_payments()
         , 'WebATM'
         , 'ATM'
         , 'CVS'
-        , 'Tenpay'
         , 'TopUpUsed'
     );
 }
@@ -524,7 +520,6 @@ function get_payment_description($payment)
         , 'WebATM' => MODULE_PAYMENT_ALLPAY_WEBATM
         , 'ATM' => MODULE_PAYMENT_ALLPAY_ATM
         , 'CVS' => MODULE_PAYMENT_ALLPAY_CVS
-        , 'Tenpay' => MODULE_PAYMENT_ALLPAY_TENPAY
         , 'TopUpUsed' => MODULE_PAYMENT_ALLPAY_TOPUPUSED
     );
     

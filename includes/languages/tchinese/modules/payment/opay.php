@@ -1,7 +1,7 @@
 <?php
     /**
      * @copyright  Copyright (c) 2015 O'Pay (http://www.opay.tw)
-     * @version 1.0.1021
+     * @version 1.2.0202
      * @author Shawn.Chang
     */
             
@@ -31,7 +31,6 @@
     define('MODULE_PAYMENT_ALLPAY_WEBATM', '網路 ATM');
     define('MODULE_PAYMENT_ALLPAY_ATM', 'ATM');
     define('MODULE_PAYMENT_ALLPAY_CVS', '超商代碼');
-    define('MODULE_PAYMENT_ALLPAY_TENPAY', '財付通');
     define('MODULE_PAYMENT_ALLPAY_TOPUPUSED', '儲值/餘額消費');
     define('MODULE_PAYMENT_ALLPAY_INSTALLMENT', '期');
     
